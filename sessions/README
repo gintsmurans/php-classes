@@ -1,0 +1,15 @@
+PHP sessions handlers
+
+Usage: 
+  new \models\sessions_memcached($memcached_link); // To start a memcached only session
+  new \models\sessions_memcached($memcached_link, $pdo_db_link); // To start a memcached session handler backed up with database
+
+It is also advisable to only do this when session is actually started, for example: 
+
+if (!empty($_COOKIE[session_name()]))
+{
+  new \models\sessions($pdo_db_link);
+}
+
+
+/ Session classes are not static because of php 5.3 behavior in destructing classes /

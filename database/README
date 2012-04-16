@@ -1,0 +1,7 @@
+Simple PDO database wrapper. 
+
+Usage: 
+  \models\db::init($config);
+  $user = \models\db::fetchAll("SELECT * FROM users WHERE user_id = ?", array($user_id));
+  
+See config.php for configuration options
