@@ -4,7 +4,7 @@ Usage:
   new \models\sessions_memcached($memcached_link); // To start a memcached only session
   new \models\sessions_memcached($memcached_link, $pdo_db_link); // To start a memcached session handler backed up with database
 
-It is also advisable to only do this when session is actually started, for example: 
+It is advisable to only start a session when it is actually required, an example: 
 
 if (!empty($_COOKIE[session_name()]))
 {
